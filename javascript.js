@@ -27,7 +27,7 @@ function displayLyrics() {
         }).then(function (lyricResponseString) {
             let lyricResponse = JSON.parse(lyricResponseString);
             lyricResponse = lyricResponse.message.body.lyrics.lyrics_body;
-            console.log(lyricResponse);
+            $("#lyricsContainer").text(lyricResponse);
         });
     });
 }
